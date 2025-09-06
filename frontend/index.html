@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trader</title>
+    <meta name="description" content="Advanced trading agent dashboard with real-time chat and position monitoring">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- API Key Login Screen -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>🎯 Dan Zanger Trading Agent</h1>
+                <p>Enter your Anthropic API key to continue</p>
+            </div>
+            <div class="login-form">
+                <div class="input-group">
+                    <label for="apiKeyInput">Anthropic API Key</label>
+                    <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-..." autocomplete="off" />
+                    <div class="help-text">
+                        <a href="https://console.anthropic.com/" target="_blank">Get your API key from Anthropic Console</a>
+                    </div>
+                </div>
+                <button id="loginButton" type="button" class="login-btn">
+                    <span id="loginButtonText">Connect</span>
+                    <div id="loginSpinner" class="spinner" style="display: none;"></div>
+                </button>
+                <div id="loginError" class="error-message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App (hidden until login) -->
+    <div class="container" id="mainContainer" style="display: none;">
+        <div class="chat-section">
+            <div class="chat-header">
+                <h2>Trading Agent Chat</h2>
+                <button id="clearChatBtn" class="clear-chat-btn" title="Clear chat history">🗑️</button>
+                <button id="logoutBtn" class="logout-btn" title="Logout">🚪</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message system">
+                    <div class="message-content">Trading agent initialized. Currently in beta and has limited functionality.</div>
+                    <div class="message-time">Now</div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Ask your trading agent anything..." autocomplete="off" spellcheck="false" />
+                <button id="sendButton" type="button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="trading-section">
+            <div class="trading-header">
+                <h2>Stock Overview</h2>
+            </div>
+            <div class="trading-content">
+                <div class="empty-state">
+                    <div class="empty-icon">📈</div>
+                    <h3>No Stock Selected</h3>
+                    <p>Ask me about a specific stock to see detailed financial information</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
