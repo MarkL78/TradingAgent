@@ -1,10 +1,14 @@
 # Trading Agent
 
-An intelligent trading assistant that provides stock analysis and investment recommendations using AI-powered market research.
+An intelligent trading assistant that provides stock analysis and investment recommendations using AI-powered market research. 
 
 ## Overview
 
 This trading agent analyzes stocks and provides investment recommendations based on market data, news sentiment, and technical analysis following proven trading methodologies.
+
+The inspiration for this was that I was researching some stocks to invest in and realized that doing this properly would require a ton of time, effort, 
+and a deep undestanding of investment principles, something AI was inherently well suited for: consuming large amounts of data and making logical decisions based on that data! Hence, this
+idea was born a few hours later the first basic MVP for the project is now ready!
 
 ## Features
 
