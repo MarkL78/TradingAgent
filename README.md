@@ -1,6 +1,7 @@
 # Trading Agent
 
 An intelligent trading assistant that provides stock analysis and investment recommendations using AI-powered market research. 
+Currently only supports Dan Zanger's methodology
 
 ## Overview
 
